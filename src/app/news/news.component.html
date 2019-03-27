@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-around flex-wrap-reverse">
+  <div>
+    
+    <ul class="list-group" *ngIf="news">
+      <h2>Independent</h2>
+      <app-news-item
+        *ngFor="let event of news.articles"
+        [newsItem]="event"
+      ></app-news-item>
+    </ul>
+  </div>
+  <div></div>
+</div>
+<div class="SPINNER">
+  <div class="spinner-grow text-primary" [ngClass]='spinnernone' role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+</div>
+

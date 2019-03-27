@@ -1,0 +1,12 @@
+.none {
+  display: none !important;
+}
+.SPINNER {
+  display: flex;
+  justify-content: center;
+  margin: 150px;
+}
+.spinner-grow{
+    width: 200px;
+    height: 200px;
+}
