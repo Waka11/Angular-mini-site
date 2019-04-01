@@ -1,10 +1,16 @@
 .list-group-item {
   margin: 20px;
-  width: 70%;
+  width: 40%;
+  background-color: #b6846b;
+}
+.newsItem{
+  width: 90%;
 }
 img {
-  width: 350px;
-  height: 250px;
+  width: 45%px;
+  height: 45%px;
+  margin: 10px;
 }
-.card {
+.card{
+  padding-right:20px;
 }

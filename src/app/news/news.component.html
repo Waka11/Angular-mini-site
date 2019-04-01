@@ -1,19 +1,46 @@
-<div class="d-flex justify-content-around flex-wrap-reverse">
-  <div>
-    
-    <ul class="list-group" *ngIf="news">
-      <h2>Independent</h2>
+<div class="d-flex justify-content-between flex-wrap-reverse">
+  <div class="">
+    <ul class="list-group newsList" *ngIf="news">
       <app-news-item
         *ngFor="let event of news.articles"
         [newsItem]="event"
       ></app-news-item>
     </ul>
   </div>
-  <div></div>
+  <div>
+    <div class="forecastList">
+      <div class="classy">
+        <input type="text" [(ngModel)]="selectedCity" class="form-control" />
+        <button (click)="onChange()" class="btn btn-primary">Find</button>
+      </div>
+      <div *ngIf="degreez === null; else valid" class="alert alert-warning">
+        Please, write the name of city!
+      </div>
+      <ng-template #valid>
+        <ul class="list-group forecastUl">
+          <li class="list-group-item alert alert-primary forecastLi">
+            City:&nbsp; {{ weatherForecast.name }}
+          </li>
+          <li class="list-group-item alert alert-secondary forecastLi">
+            Country:&nbsp; {{ weatherForecast.sys.country }}
+          </li>
+          <li class="list-group-item alert alert-secondary forecastLi" >
+            Temperature:&nbsp; {{ degreez }}&deg;C
+          </li>
+          <li class="list-group-item alert alert-secondary forecastLi">
+            Weather:&nbsp; {{ weather }}&nbsp;
+            <img src="http://openweathermap.org/img/w/{{ icon }}.png" alt="{{ weather }}" />
+          </li>
+          <li class="list-group-item alert alert-secondary forecastLi">
+            Wind speed:&nbsp; {{ weatherForecast.wind.speed }}m/s
+          </li>
+        </ul>
+      </ng-template>
+    </div>
+  </div>
 </div>
-<div class="SPINNER">
-  <div class="spinner-grow text-primary" [ngClass]='spinnernone' role="status">
-  <span class="sr-only">Loading...</span>
+<div class="SPINNER" [ngClass]="spinnernone">
+  <div class="spinner-grow text-secondary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
 </div>
-</div>
-

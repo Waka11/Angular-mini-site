@@ -8,7 +8,7 @@ import { ErrorPageComponent } from "./error-page/error-page.component";
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "news", component: NewsComponent },
-  { path: "hzsho", component: HzshoComponent },
+  { path: "garage", component: HzshoComponent },
   { path: "**", component: ErrorPageComponent }
 ];
 

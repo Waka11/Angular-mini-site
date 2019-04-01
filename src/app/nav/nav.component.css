@@ -1,0 +1,11 @@
+ul {
+  background-color: #000010;
+}
+li a{
+    color: #cacac8;
+    font-weight: bolder;
+    font-size: 27px;
+}
+li a:hover{
+    color: #b6846b;
+}
