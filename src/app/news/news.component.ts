@@ -3,7 +3,6 @@ import { DataService } from "../data.service";
 import { WeatherService } from "../forecast.service";
 import "rxjs/add/operator/map";
 
-
 @Component({
   selector: "app-news",
   templateUrl: "./news.component.html",

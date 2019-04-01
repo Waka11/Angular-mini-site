@@ -4,8 +4,10 @@
 .newsList{
   width: 100%!important;
 }
+.forecastDiv{
+  margin: 30px;
+}
 .forecastList{
-  margin: 15px;
   padding: 15px;
   border-radius: 15px;
   background-color: #b6846b;

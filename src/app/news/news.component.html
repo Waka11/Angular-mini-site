@@ -7,11 +7,11 @@
       ></app-news-item>
     </ul>
   </div>
-  <div>
+  <div class='forecastDiv'>
     <div class="forecastList">
       <div class="classy">
         <input type="text" [(ngModel)]="selectedCity" class="form-control" />
-        <button (click)="onChange()" class="btn btn-primary">Find</button>
+        <button (click)="onChange()" class="btn btn-dark">Find</button>
       </div>
       <div *ngIf="degreez === null; else valid" class="alert alert-warning">
         Please, write the name of city!
