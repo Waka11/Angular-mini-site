@@ -1,5 +1,10 @@
-ul {
+ul, div {
   background-color: #000010;
+}
+div{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 li a{
     color: #cacac8;
@@ -8,4 +13,9 @@ li a{
 }
 li a:hover{
     color: #b6846b;
+}
+img{
+  height: 60px;
+  width: 60px;
+  margin-left: 20px;
 }
