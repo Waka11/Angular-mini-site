@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 body{
     height: 100%;
+}
+div.mat-slider-ticks-container{
+  background-color: azure!important
+}
+div.mat-slider-thumb{
+    background-color: gold!important;
+}
+button.mat-button{
+    margin: 5px!important;
+    min-width: 40px!important;
+    zoom: 0.5!important;
+}
+mat-advanced-audio-player{
+    color:azure!important;
+    max-width: 320px!important;
+    margin: 15px!important;
+}
+mat-advanced-audio-player mat-card{
+    background-color: #cacac8!important;
+}
+mat-card.ngx-advanced-audio-player-title.mat-card div.p-1{
+height: 28px!important;
+}
+div.ng-tns-c12-1.ng-trigger.ng-trigger-transformPanel.mat-select-panel.mat-primary,.cdk-overlay-pane{
+  margin-top: 50px!important;
+}
+.mat-form-field-label.ng-tns-c11-2.mat-empty.mat-form-field-empty.ng-star-inserted,.mat-form-field-label.ng-tns-c11-0.mat-empty.mat-form-field-empty.ng-star-inserted{
+    color:gold!important;
+}
+.mat-form-field-underline.ng-tns-c11-0.ng-star-inserted,.mat-form-field-underline.ng-tns-c11-2.ng-star-inserted{
+    background-color: gold;
 }

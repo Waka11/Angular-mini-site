@@ -8,9 +8,9 @@ import "rxjs/add/operator/map";
 })
 export class DataService {
     constructor(private request: HttpClient) {}
-  getNews() {
+  getNews(source) {
     return this.request.get(
-      "https://newsapi.org/v2/top-headlines?sources=independent&apiKey=b235b608bf1149f5af92f46975273b78"
+      `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=b235b608bf1149f5af92f46975273b78`
     ).map((response: Response) => {
         console.log("response", response);
         return response;

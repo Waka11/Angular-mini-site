@@ -1,16 +1,16 @@
 .none {
   display: none !important;
 }
-.newsList{
-  width: 100%!important;
+.newsList {
+  width: 100% !important;
 }
-.forecastDiv{
+.forecastDiv {
   margin: 30px;
 }
-.forecastList{
-  padding: 15px;
+.forecastList {
+  padding: 22.5px;
   border-radius: 15px;
-  background-color: #b6846b;
+  background-color: #ccbba8;
   height: fit-content;
 }
 .SPINNER {
@@ -23,22 +23,54 @@
   width: 200px;
   height: 200px;
 }
-.classy{
-    margin: 15px;
-    display: flex;
-    justify-content: space-between;
+.classy {
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.form-control{
-    width: 70%!important;
+.form-control {
+  width: 70% !important;
 }
-.list-group{
-    width: 462px!important;
-    margin: 15px!important;
-    list-style-type: none;
+.list,.list div {
+  align-content: center;
 }
-.forecastLi, .forecastUl{
-  width: 90%!important;
+.list div{
+  padding-left:15%; 
+  padding-right:15%; 
 }
-.alert{
-    margin-bottom: 5px!important;
+button.btn-dark{
+  height: 50px;
+}
+.list-group {
+  width: 462px !important;
+  margin: 15px !important;
+  list-style-type: none;
+}
+.forecastLi,
+.forecastUl {
+  width: 90% !important;
+}
+.alert {
+  margin-bottom: 5px !important;
+}
+.alert.alert-danger{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+select {
+  margin: 15px;
+}
+div.list button {
+  margin: 15px;
+  width: 100px;
+}
+mat-form-field {
+  margin: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  div.d-flex.justify-content-between.flex-wrap-reverse {
+    justify-content: center !important;
+  }
 }

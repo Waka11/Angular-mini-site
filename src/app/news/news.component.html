@@ -1,5 +1,18 @@
 <div class="d-flex justify-content-between flex-wrap-reverse">
-  <div class="">
+  <div class="list">
+    <div>
+      <mat-form-field>
+      <mat-label>Choose the Source</mat-label>
+      <mat-select id="news" [(ngModel)]="selectedType">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let option of options" [value]="option.value">{{option.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button type="button" class="btn" [ngClass]='chooseButtonClass' (click)="SubmitType()">
+      Choose
+    </button>
+    </div>
+    <p class="alert alert-danger"  [ngClass]='errorClass'>{{error}}</p>
     <ul class="list-group newsList" *ngIf="news">
       <app-news-item
         *ngFor="let event of news.articles"
@@ -7,11 +20,14 @@
       ></app-news-item>
     </ul>
   </div>
-  <div class='forecastDiv'>
+  <div class="forecastDiv">
     <div class="forecastList">
       <div class="classy">
-        <input type="text" [(ngModel)]="selectedCity" class="form-control" />
-        <button (click)="onChange()" class="btn btn-dark">Find</button>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Select City" [(ngModel)]="selectedCity">
+        </mat-form-field>
+        <!-- <button (click)="onChange()" class="btn btn-dark">Find</button> -->
+        <button mat-raised-button color="primary" (click)="onChange()">Find</button>
       </div>
       <div *ngIf="degreez === null; else valid" class="alert alert-warning">
         Please, write the name of city!
@@ -24,12 +40,15 @@
           <li class="list-group-item alert alert-secondary forecastLi">
             Country:&nbsp; {{ weatherForecast.sys.country }}
           </li>
-          <li class="list-group-item alert alert-secondary forecastLi" >
+          <li class="list-group-item alert alert-secondary forecastLi">
             Temperature:&nbsp; {{ degreez }}&deg;C
           </li>
           <li class="list-group-item alert alert-secondary forecastLi">
             Weather:&nbsp; {{ weather }}&nbsp;
-            <img src="http://openweathermap.org/img/w/{{ icon }}.png" alt="{{ weather }}" />
+            <img
+              src="http://openweathermap.org/img/w/{{ icon }}.png"
+              alt="{{ weather }}"
+            />
           </li>
           <li class="list-group-item alert alert-secondary forecastLi">
             Wind speed:&nbsp; {{ weatherForecast.wind.speed }}m/s

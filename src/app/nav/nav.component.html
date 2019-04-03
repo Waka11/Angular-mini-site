@@ -1,5 +1,32 @@
-<div>
-  <a href='https://www.hitfm.ua/player/best/'><img src="../../assets/imgs/GARAGE.png" alt="garage"></a> 
+<div class="nav">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ show: navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/garage">Garage</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <img src="../../assets/imgs/GARAGE.png" alt="garage" />
+  <mat-advanced-audio-player
+    [playlist]="msaapPlaylist"
+    [displayTitle]="msaapDisplayTitle"
+    [displayPlaylist]="msaapDisplayPlayList"
+    [pageSizeOptions]="msaapPageSizeOptions"
+    [expanded]="true"
+  ></mat-advanced-audio-player>
+
   <ul class="nav justify-content-end">
     <li class="nav-item">
       <a class="nav-link" routerLink="/">Home</a>

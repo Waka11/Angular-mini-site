@@ -1,17 +1,22 @@
 .list-group-item {
   margin: 20px;
-  width: 40%;
-  background-color: #b6846b;
+  background-color: #ccbba8;
   border-radius: 15px;
 }
-.newsItem{
+.newsItem {
   width: 90%;
 }
 img {
-  width: 45%px;
-  height: 45%px;
   margin: 10px;
 }
-.card{
-  padding-right:20px;
+.card {
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 500px) {
+.list-group-item {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
 }
