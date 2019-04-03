@@ -3,7 +3,6 @@
     <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" [ngClass]="{ show: navbarOpen }">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -18,15 +17,23 @@
       </ul>
     </div>
   </nav>
-  <img src="../../assets/imgs/GARAGE.png" alt="garage" />
-  <mat-advanced-audio-player
+  
+  <img src="../../assets/imgs/GARAGE.png" alt="garage" class="garage" routerLink="/"/>
+
+  <div class="playerDiv">
+    <mat-advanced-audio-player
     [playlist]="msaapPlaylist"
     [displayTitle]="msaapDisplayTitle"
     [displayPlaylist]="msaapDisplayPlayList"
     [pageSizeOptions]="msaapPageSizeOptions"
     [expanded]="true"
+    [ngClass]='playerClass'
   ></mat-advanced-audio-player>
+  </div>
+  
 
+  <img src="../../assets/imgs/player.png" alt="player" class="player" (click)='openPlayer()'>
+  
   <ul class="nav justify-content-end">
     <li class="nav-item">
       <a class="nav-link" routerLink="/">Home</a>

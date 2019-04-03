@@ -7,8 +7,10 @@ import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { NgxAudioPlayerModule } from "ngx-audio-player";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatButtonModule, MatCheckboxModule } from "@angular/material";
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from "@angular/material/select";
+import { MatInputModule } from "@angular/material/input";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { WeatherService } from "./forecast.service";
 import { DataService } from "./data.service";
@@ -43,7 +45,9 @@ import { NewsItemComponent } from "./news/news-item/news-item.component";
     MatButtonModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule,
+    MatProgressSpinnerModule
   ],
   providers: [WeatherService, DataService],
   bootstrap: [AppComponent]

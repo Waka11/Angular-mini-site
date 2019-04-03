@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-between flex-wrap-reverse">
   <div class="list">
-    <div>
+    <div class="chooseNews">
       <mat-form-field>
       <mat-label>Choose the Source</mat-label>
       <mat-select id="news" [(ngModel)]="selectedType">
@@ -8,7 +8,7 @@
         <mat-option *ngFor="let option of options" [value]="option.value">{{option.name}}</mat-option>
       </mat-select>
     </mat-form-field>
-    <button type="button" class="btn" [ngClass]='chooseButtonClass' (click)="SubmitType()">
+    <button mat-raised-button color="{{chooseButtonClass}}" (click)="SubmitType()">
       Choose
     </button>
     </div>
@@ -26,7 +26,6 @@
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Select City" [(ngModel)]="selectedCity">
         </mat-form-field>
-        <!-- <button (click)="onChange()" class="btn btn-dark">Find</button> -->
         <button mat-raised-button color="primary" (click)="onChange()">Find</button>
       </div>
       <div *ngIf="degreez === null; else valid" class="alert alert-warning">
@@ -58,8 +57,9 @@
     </div>
   </div>
 </div>
-<div class="SPINNER" [ngClass]="spinnernone">
+<!-- <div class="SPINNER" [ngClass]="spinnernone">
   <div class="spinner-grow text-secondary" role="status">
     <span class="sr-only">Loading...</span>
   </div>
-</div>
+</div> -->
+<mat-progress-spinner mode="{{spinnermode}}" class="SPINNER"></mat-progress-spinner>

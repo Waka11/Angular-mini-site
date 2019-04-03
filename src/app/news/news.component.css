@@ -5,19 +5,21 @@
   width: 100% !important;
 }
 .forecastDiv {
-  margin: 30px;
+  margin: 15px;
 }
 .forecastList {
   padding: 22.5px;
   border-radius: 15px;
-  background-color: #ccbba8;
+  background-color: gold;
   height: fit-content;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .SPINNER {
-  display: flex;
-  justify-content: center;
-  margin-top: 210px;
-  padding-bottom: 207px;
+  position: fixed;
+  z-index: 100;
+  right: 40%;
+  left: 40%;
 }
 .spinner-grow {
   width: 200px;
@@ -32,20 +34,25 @@
 .form-control {
   width: 70% !important;
 }
-.list,.list div {
+.list,
+.list div {
   align-content: center;
 }
-.list div{
-  padding-left:15%; 
-  padding-right:15%; 
+.list div {
+  padding-left: 15%;
+  padding-right: 15%;
 }
-button.btn-dark{
+button.btn-dark {
   height: 50px;
 }
 .list-group {
   width: 462px !important;
   margin: 15px !important;
   list-style-type: none;
+}
+.forecastLi {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .forecastLi,
 .forecastUl {
@@ -54,7 +61,7 @@ button.btn-dark{
 .alert {
   margin-bottom: 5px !important;
 }
-.alert.alert-danger{
+.alert.alert-danger {
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -63,10 +70,26 @@ select {
 }
 div.list button {
   margin: 15px;
-  width: 100px;
+  width: 100px !important;
 }
 mat-form-field {
   margin: 15px;
+}
+mat-form-field input {
+  color: blue;
+}
+.chooseNews {
+  background-color: gold;
+  border-radius: 15px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.chooseNews button.mat-raised-button.mat-primary {
+  height: 45px;
+  outline: none !important;
 }
 
 @media screen and (max-width: 900px) {

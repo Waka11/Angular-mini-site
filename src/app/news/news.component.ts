@@ -14,7 +14,7 @@ export class NewsComponent implements OnInit {
     private weatherservice: WeatherService
   ) {}
   news: any = [];
-  spinnernone = "none";
+  spinnermode = "determinate";
 
   selectedCity: string = null;
   weatherForecast: any = {};
@@ -25,7 +25,7 @@ export class NewsComponent implements OnInit {
   selectedType = null;
   error = null;
   errorClass = "none";
-  chooseButtonClass = "btn-danger";
+  chooseButtonClass = "primary";
 
   options = [
     { name: "Political (The Independent)", value: "independent" },
@@ -43,15 +43,15 @@ export class NewsComponent implements OnInit {
       this.errorClass = null;
       this.error = "Please, select!";
     } else {
-      this.chooseButtonClass = "btn-success";
-      this.spinnernone = null;
+      this.chooseButtonClass = "warn";
+      this.spinnermode = 'indeterminate';
       setTimeout(() => {
         this.data.getNews(this.selectedType).subscribe(response => {
           this.news = response;
           console.log(this.news);
         });
-        this.spinnernone = "none";
-        this.chooseButtonClass = "btn-danger";
+        this.spinnermode = "determinate";
+        this.chooseButtonClass = "primary";
         this.errorClass = "none";
       }, 2000);
     }

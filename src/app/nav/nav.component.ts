@@ -18,7 +18,15 @@ export class NavComponent implements OnInit {
     }
   ];
 
+  playerClass = 'none';
   navbarOpen = false;
+
+  openPlayer(){
+    if(this.playerClass === null){
+      this.playerClass = "none";
+    }
+    else{this.playerClass = null;}
+  }
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;

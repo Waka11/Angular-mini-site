@@ -15,37 +15,58 @@ li a {
   font-size: 27px;
 }
 li a:hover {
-  color: gold!important;
+  color: gold !important;
 }
 img {
   height: 60px;
   width: 60px;
   margin-left: 20px;
+  outline: none;
 }
-nav{
-  display: none
+img:hover, .navbar-toggler-icon:hover {
+  opacity: 0.5;
 }
-.navbar-toggler{
+nav {
+  display: none;
+}
+nav.navbar{
+  padding: 0!important;
+}
+.playerDiv{
+  width: 316px;
+}
+.navbar-toggler {
   outline: none;
   color: gold;
-border-color: #000010;
-font-size: 60px;
-padding: 0;
+  border-color: #000010;
+  font-size: 40px;
+  padding: 0;
 }
-.navbar-toggler:hover {
-opacity: 0.5;
+span.navbar-toggler-icon {
+  background-image: url(../../assets/imgs/burger.png) !important;
 }
-span.navbar-toggler-icon{
-  background-image: url(../../assets/imgs/burger.png)!important;
+.none{
+  display: none;
 }
-
 
 @media screen and (max-width: 900px) {
-  ul.nav.justify-content-end, img {
-  display:none;
+  ul.nav.justify-content-end,
+  img.garage {
+    display: none;
   }
-  nav{
+  nav {
     display: flex;
-    padding-top: 15px!important;
+    padding-top: 15px !important;
+  }
+}
+@media screen and (max-width: 570px) {
+  .nav{
+    flex-direction: column;
+  }
+  .playerDiv{
+    margin: 10px;
+  }
+  img.player{
+    margin: 15px;
   }
 }
