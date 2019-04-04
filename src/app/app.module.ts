@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { NgxAudioPlayerModule } from "ngx-audio-player";
@@ -10,8 +10,9 @@ import { MatButtonModule, MatCheckboxModule } from "@angular/material";
 import { MatSelectModule } from "@angular/material/select";
 import { MatInputModule } from "@angular/material/input";
 import { MatMenuModule } from "@angular/material/menu";
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatTabsModule } from "@angular/material/tabs";
+import { MatRadioModule } from "@angular/material/radio";
 
 import { WeatherService } from "./forecast.service";
 import { DataService } from "./data.service";
@@ -49,7 +50,9 @@ import { NewsItemComponent } from "./news/news-item/news-item.component";
     MatInputModule,
     MatMenuModule,
     MatProgressSpinnerModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule,
+    MatRadioModule
   ],
   providers: [WeatherService, DataService],
   bootstrap: [AppComponent]
