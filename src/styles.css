@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-body,main {
+body,
+main {
   height: 100%;
-  background-color: #e6d4a2!important;
+  background-color: #2a0111 !important;
 }
 div.mat-slider-ticks-container {
   background-color: azure !important;
@@ -28,8 +29,8 @@ mat-advanced-audio-player {
 mat-advanced-audio-player mat-card {
   background-color: #cacac8 !important;
 }
-mat-card.row.d-flex.justify-content-center.ngx-advanced-audio-player.mat-card{
-    height: 40px;
+mat-card.row.d-flex.justify-content-center.ngx-advanced-audio-player.mat-card {
+  height: 40px;
 }
 mat-card.ngx-advanced-audio-player-title.mat-card div.p-1 {
   height: 28px !important;

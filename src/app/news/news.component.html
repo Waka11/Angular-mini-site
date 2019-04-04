@@ -18,6 +18,7 @@
         *ngFor="let event of news.articles"
         [newsItem]="event"
       ></app-news-item>
+      <mat-progress-spinner mode="{{spinnermode}}" class="SPINNER"></mat-progress-spinner>
     </ul>
   </div>
   <div class="forecastDiv">
@@ -28,7 +29,7 @@
         </mat-form-field>
         <button mat-raised-button color="primary" (click)="onChange()">Find</button>
       </div>
-      <div *ngIf="degreez === null; else valid" class="alert alert-warning">
+      <div *ngIf="degreez === null; else valid" class="alert alert-danger">
         Please, write the name of city!
       </div>
       <ng-template #valid>
@@ -62,4 +63,3 @@
     <span class="sr-only">Loading...</span>
   </div>
 </div> -->
-<mat-progress-spinner mode="{{spinnermode}}" class="SPINNER"></mat-progress-spinner>

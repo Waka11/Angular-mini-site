@@ -10,16 +10,15 @@
 .forecastList {
   padding: 22.5px;
   border-radius: 15px;
-  background-color: gold;
+  background-color: #d3dce5;
   height: fit-content;
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .SPINNER {
   position: fixed;
   z-index: 100;
-  right: 40%;
-  left: 40%;
+  top:50%;
+  right: 20%;
+  left: 22.5%;
 }
 .spinner-grow {
   width: 200px;
@@ -50,10 +49,6 @@ button.btn-dark {
   margin: 15px !important;
   list-style-type: none;
 }
-.forecastLi {
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
 .forecastLi,
 .forecastUl {
   width: 90% !important;
@@ -79,7 +74,7 @@ mat-form-field input {
   color: blue;
 }
 .chooseNews {
-  background-color: gold;
+  background-color: #d3dce5;
   border-radius: 15px;
   margin: 15px;
   display: flex;

@@ -1,10 +1,16 @@
 <li class="list-group-item newsItem">
   <div class="card rounded">
-    <img [src]="newsItem.urlToImage" class="card-img-top rounded" alt="{{newsItem.title}}" />
+    <img
+      [src]="newsItem.urlToImage"
+      class="card-img-top rounded"
+      alt="{{ newsItem.title }}"
+    />
     <div class="card-body">
       <h5 class="card-title">{{ newsItem.title }}</h5>
       <p class="card-text">{{ newsItem.content }}</p>
-      <a href="{{ newsItem.url }}" class="btn btn-primary">For more information</a>
+      <button mat-raised-button color="primary">
+        <a href="{{ newsItem.url }}">For more information</a>
+      </button>
     </div>
   </div>
 </li>

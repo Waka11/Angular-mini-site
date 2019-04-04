@@ -1,6 +1,6 @@
 ul,
 div {
-  background-color: #000010;
+  background-color: #132434;
 }
 div.nav {
   display: flex;
@@ -23,16 +23,17 @@ img {
   margin-left: 20px;
   outline: none;
 }
-img:hover, .navbar-toggler-icon:hover {
+img:hover,
+.navbar-toggler-icon:hover {
   opacity: 0.5;
 }
 nav {
   display: none;
 }
-nav.navbar{
-  padding: 0!important;
+nav.navbar {
+  padding: 0 !important;
 }
-.playerDiv{
+.playerDiv {
   width: 316px;
 }
 .navbar-toggler {
@@ -45,7 +46,7 @@ nav.navbar{
 span.navbar-toggler-icon {
   background-image: url(../../assets/imgs/burger.png) !important;
 }
-.none{
+.none {
   display: none;
 }
 
@@ -60,13 +61,13 @@ span.navbar-toggler-icon {
   }
 }
 @media screen and (max-width: 570px) {
-  .nav{
+  .nav {
     flex-direction: column;
   }
-  .playerDiv{
+  .playerDiv {
     margin: 10px;
   }
-  img.player{
+  img.player {
     margin: 15px;
   }
 }
