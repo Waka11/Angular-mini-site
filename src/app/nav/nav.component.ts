@@ -13,19 +13,24 @@ export class NavComponent implements OnInit {
 
   msaapPlaylist: Track[] = [
     {
-      title: "Viva la Vida",
-      link: "../../assets/audio/7-coldplay-viva_la_vida_(zvukoff.ru).mp3"
+      title: "Avengers",
+      link: "../../assets/audio/alan-silvestri-the-avengers.mp3"
     }
   ];
+  msbapTitle = "Avengers";
+  msbapAudioUrl = "../../assets/audio/alan-silvestri-the-avengers.mp3";
 
-  playerClass = 'none';
+  msbapDisplayTitle = true;
+
+  playerClass = "none";
   navbarOpen = false;
 
-  openPlayer(){
-    if(this.playerClass === null){
+  openPlayer() {
+    if (this.playerClass === null) {
       this.playerClass = "none";
+    } else {
+      this.playerClass = null;
     }
-    else{this.playerClass = null;}
   }
 
   toggleNavbar() {

@@ -3,11 +3,18 @@
 
 body,
 main {
+  /*background-color: #bf033b;
+  background-image: linear-gradient(315deg, #bf033b 0%, #ffc719 74%) !important;*/
+  background-color: #ffd045;
+  background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);
+}
+router-outlet ~ * {
+  position: absolute;
   height: 100%;
-  background-color: #2a0111 !important;
+  width: 100%;
 }
 div.mat-slider-ticks-container {
-  background-color: azure !important;
+  background-color: crimson !important;
 }
 div.mat-slider-thumb {
   background-color: gold !important;
@@ -16,6 +23,10 @@ button.mat-button {
   margin: 5px !important;
   min-width: 40px !important;
   zoom: 0.5 !important;
+}
+mat-form-field button.mat-raised-button.mat-primary {
+  height: 45px;
+  outline: none;
 }
 mat-advanced-audio-player {
   color: azure !important;
@@ -38,4 +49,15 @@ mat-card.ngx-advanced-audio-player-title.mat-card div.p-1 {
 div.ng-tns-c12-1.ng-trigger.ng-trigger-transformPanel.mat-select-panel.mat-primary,
 .cdk-overlay-pane {
   margin-top: 50px !important;
+}
+app-home,
+app-news,
+app-hzsho {
+  height: 88% !important;
+}
+.mat-tab-body-wrapper {
+  padding: 20px;
+}
+.mat-tab-label.mat-ripple.ng-star-inserted .mat-tab-label-content {
+  font-weight: bolder !important;
 }

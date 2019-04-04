@@ -11,6 +11,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatInputModule } from "@angular/material/input";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { WeatherService } from "./forecast.service";
 import { DataService } from "./data.service";
@@ -47,7 +48,8 @@ import { NewsItemComponent } from "./news/news-item/news-item.component";
     MatSelectModule,
     MatInputModule,
     MatMenuModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTabsModule
   ],
   providers: [WeatherService, DataService],
   bootstrap: [AppComponent]

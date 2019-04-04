@@ -16,7 +16,7 @@
 .SPINNER {
   position: fixed;
   z-index: 100;
-  top:50%;
+  top: 50%;
   right: 20%;
   left: 22.5%;
 }
@@ -39,7 +39,6 @@
 }
 .list div {
   padding-left: 15%;
-  padding-right: 15%;
 }
 button.btn-dark {
   height: 50px;
@@ -48,6 +47,10 @@ button.btn-dark {
   width: 462px !important;
   margin: 15px !important;
   list-style-type: none;
+}
+.forecastLi, .forecastList,.alert.alert-danger {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .forecastLi,
 .forecastUl {
@@ -59,6 +62,7 @@ button.btn-dark {
 .alert.alert-danger {
   margin-left: 5%;
   margin-right: 5%;
+  border-radius: 15px;
 }
 select {
   margin: 15px;
@@ -74,17 +78,14 @@ mat-form-field input {
   color: blue;
 }
 .chooseNews {
-  background-color: #d3dce5;
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
   border-radius: 15px;
   margin: 15px;
   display: flex;
   align-items: center;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-.chooseNews button.mat-raised-button.mat-primary {
-  height: 45px;
-  outline: none !important;
 }
 
 @media screen and (max-width: 900px) {

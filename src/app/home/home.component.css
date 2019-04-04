@@ -1,0 +1,38 @@
+.container {
+  margin-top: 15px;
+  border-radius: 15px;
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+img {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+}
+.memeTab {
+  display: flex;
+  align-items: center;
+}
+.memeTab div {
+  margin-left: 5%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.memeTab div p {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    zoom: 0.9;
+  }
+  .memeTab {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
