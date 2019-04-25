@@ -1,36 +1,91 @@
-<div class="d-flex justify-content-between flex-wrap-reverse">
+<div class="d-flex justify-content-around flex-wrap-reverse">
   <div class="list">
     <div class="chooseNews">
       <mat-form-field>
-      <mat-label>Choose the Source</mat-label>
-      <mat-select id="news" [(ngModel)]="selectedType">
-        <mat-option>None</mat-option>
-        <mat-option *ngFor="let option of options" [value]="option.value">{{option.name}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <button mat-raised-button color="{{chooseButtonClass}}" (click)="SubmitType()">
-      Choose
-    </button>
+        <mat-label>Choose the Source</mat-label>
+        <mat-select id="news" [(ngModel)]="selectedType">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let option of options" [value]="option.value">{{
+            option.name
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="{{ chooseButtonClass }}"
+        (click)="SubmitType()"
+      >
+        Choose
+      </button>
     </div>
-    <p class="alert alert-danger"  [ngClass]='errorClass'>{{error}}</p>
+    <p class="alert alert-danger" [ngClass]="errorClass">{{ error }}</p>
     <ul class="list-group newsList" *ngIf="news">
       <app-news-item
         *ngFor="let event of news.articles"
         [newsItem]="event"
       ></app-news-item>
-      <mat-progress-spinner mode="{{spinnermode}}" class="SPINNER"></mat-progress-spinner>
+      <mat-progress-spinner
+        mode="{{ spinnermode }}"
+        class="SPINNER"
+      ></mat-progress-spinner>
     </ul>
   </div>
+
+  <div class="radiosList">
+    <div class="radios">
+      <h3>Select base currency:</h3>
+      <mat-radio-group
+        class="currencyButton"
+        aria-label="Select base currency:"
+      >
+        <div>
+          <mat-radio-button
+            (click)="changeCurrency(radio.name, radio.value)"
+            *ngFor="let radio of radios"
+            [value]="radio.value"
+            >{{ radio.name }}</mat-radio-button
+          >
+        </div>
+        <div class="showCurrency">
+          {{ changebleCurrency }}
+        </div>
+      </mat-radio-group>
+      <button mat-raised-button color="primary" (click)="SubmitCurrency()">
+        Submit
+      </button>
+    </div>
+    <ng-template
+      [ngIf]="currencyContainer[0] !== undefined">
+      <ul class="list-group forecastUl">
+        <li class="list-group-item alert alert-secondary forecastLi">
+          Base currency:&nbsp; {{ currencyContainer[0].base_ccy }}
+        </li>
+        <li class="list-group-item alert alert-secondary forecastLi">
+          Currency:&nbsp; {{ currencyContainer[0].ccy }}
+        </li>
+        <li class="list-group-item alert alert-secondary forecastLi">
+          Buy:&nbsp; {{ currencyContainer[0].buy }}
+        </li>
+        <li class="list-group-item alert alert-secondary forecastLi">
+          Sale:&nbsp; {{ currencyContainer[0].sale }}
+        </li>
+      </ul>
+    </ng-template>
+  </div>
+
   <div class="forecastDiv">
     <div class="forecastList">
       <div class="classy">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Select City" [(ngModel)]="selectedCity">
+          <input
+            matInput
+            placeholder="Select City"
+            [(ngModel)]="selectedCity"
+          />
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="onChange()">Find</button>
-      </div>
-      <div *ngIf="degreez === null; else valid" class="alert alert-danger">
-        Please, write the name of city!
+        <button mat-raised-button color="primary" (click)="onChange()">
+          Find
+        </button>
       </div>
       <ng-template #valid>
         <ul class="list-group forecastUl">
@@ -56,10 +111,12 @@
         </ul>
       </ng-template>
     </div>
+    <div
+      *ngIf="degreez === null; else valid"
+      class="alert alert-danger"
+      [ngClass]="errorClass_2"
+    >
+      Please, write the name of city!
+    </div>
   </div>
 </div>
-<!-- <div class="SPINNER" [ngClass]="spinnernone">
-  <div class="spinner-grow text-secondary" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
-</div> -->

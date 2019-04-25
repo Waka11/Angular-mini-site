@@ -10,8 +10,10 @@
 .forecastList {
   padding: 22.5px;
   border-radius: 15px;
-  background-color: #d3dce5;
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
   height: fit-content;
+  margin-bottom:15px; 
 }
 .SPINNER {
   position: fixed;
@@ -47,8 +49,10 @@ button.btn-dark {
   width: 462px !important;
   margin: 15px !important;
   list-style-type: none;
-}
-.forecastLi, .forecastList,.alert.alert-danger {
+padding-left: 7%;}
+.forecastLi,
+.forecastList,
+.alert.alert-danger {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
@@ -86,6 +90,36 @@ mat-form-field input {
   align-items: center;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+div.form form,
+div.radios mat-radio-group div {
+  display: flex;
+  flex-direction: column;
+}
+div.radios,
+div.form {
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  padding: 15px;
+  height: fit-content;
+}
+.radios h3{
+  user-select: none;
+}
+.currencyButton {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.showCurrency {
+  margin: 65px;
+  margin-bottom: 0;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 900px) {

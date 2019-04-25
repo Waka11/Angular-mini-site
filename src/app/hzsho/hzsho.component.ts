@@ -8,7 +8,6 @@ import {
 } from "@angular/forms";
 import { ErrorStateMatcher } from "@angular/material/core";
 
-/** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
     control: FormControl | null,
@@ -23,7 +22,6 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
-/** @title Input with a custom ErrorStateMatcher */
 @Component({
   selector: "app-hzsho",
   templateUrl: "./hzsho.component.html",
@@ -39,7 +37,7 @@ export class HzshoComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   SubmitForm(Form: NgForm) {
-    console.log("form", Form);
+    console.log("form", this.emailFormControl);
   }
 
   radios = [
@@ -52,6 +50,7 @@ export class HzshoComponent implements OnInit {
     { name: "Entertainment (MTV News)", value: "mtv-news" }
   ];
 
+  
   constructor() {}
 
   ngOnInit() {}

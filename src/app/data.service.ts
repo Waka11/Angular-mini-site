@@ -16,4 +16,15 @@ export class DataService {
         return response;
     });;
   }
+
+  getCurrency(){
+    return this.request
+      .get(
+        ` https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3`
+      )
+      .map((response: Response) => {
+        console.log("response", response);
+        return response;
+      });
+  }
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Track } from "ngx-audio-player";   
+import { Component, OnInit } from "@angular/core";
+import { Track } from "ngx-audio-player";
 
 @Component({
   selector: "app-nav",

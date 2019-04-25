@@ -17,3 +17,6 @@ div.radio, div.form {
     padding: 15px;
     height: fit-content;
 }
+.mat-raised-button.mat-primary{
+  width: 100%;
+}
